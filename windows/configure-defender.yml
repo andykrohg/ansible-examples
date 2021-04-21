@@ -1,0 +1,6 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+  - name: Configure Windows Defender Moderate Threat Default Action
+    win_shell: 'Set-MpPreference -ModerateThreatDefaultAction {{ action }}'
