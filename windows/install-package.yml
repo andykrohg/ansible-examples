@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+  - name: Install chocolatey packages
+    win_chocolatey:
+      name: '{{ packages }}'
+      state: present
