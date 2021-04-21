@@ -2,7 +2,7 @@
 - hosts: all
   gather_facts: false
   tasks:
-  - name: Install chocolatey packages
+  - name: Configure chocolatey packages
     win_chocolatey:
       name: '{{ packages }}'
-      state: present
+      state: '{{ package_state }}'
