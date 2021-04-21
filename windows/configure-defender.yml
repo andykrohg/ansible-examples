@@ -2,5 +2,5 @@
 - hosts: all
   gather_facts: false
   tasks:
-  - name: Configure Windows Defender Moderate Threat Default Action
-    win_shell: 'Set-MpPreference -ModerateThreatDefaultAction {{ action }}'
+  - name: Add Exclusion to Defender Scan
+    win_shell: 'Set-MpPreference -ExclusionPath {{ exclusion_path }}'
